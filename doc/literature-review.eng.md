@@ -2,7 +2,7 @@
 
 ### Backgrounds
 
-Sequencing microbiome genome provides insights in understanding biological and medical problems. Microbiome genomic studies enable to achieve tasks like evaluating the abundance of bacteria and spotting the unknown from environmental samples {{Yu 2017}}, human microbiome reconstruction {{Pasolli 2019}}, etc. With these new methods and tools, properties of microbial communities and their connections to environment {{Yu 2017, Seeleuthner 2018}} and human lifestyle {{Pasolli 2019}} can be revealed. Such studies require practicing of the Next-Generation genome sequencing, which concerns technological challenges in both biological and computational aspects. {{Gawad 2015}}
+Sequencing microbiome genome provides insights in understanding biological and medical problems. Microbiome genomic studies enable to achieve tasks like evaluating the abundance of bacteria and spotting the unknown from environmental samples {{Yu 2017}}, human microbiome reconstruction {{Pasolli 2019}}, etc. With these new methods and tools, properties of microbial communities and their connections to environment {{Yu 2017, Seeleuthner 2018}} and human health {{Galkin 2018, Pasolli 2019}} can be revealed. Such studies require practicing of the Next-Generation genome sequencing, which concerns technological challenges in both biological and computational aspects. {{Gawad 2015}}
 
 There are two approaches in microbiome genomic studies depending on the genome subjects: (a) metagenome, whose subject is the microbial community in the environment {{Tringe 2005}} and  (b) single-cell, which performs sequencing on isolated individual cells or species. {{Gawad 2015, Tringe 2005}} 
 
@@ -35,7 +35,7 @@ The reads will then be used for data analysis. Common tasks are assembly of the 
 
 ##### Metagenome
 
-The metagenome approach to microbiome genomic studies concerns sequencing of 
+The metagenome approach to microbiome genomic studies concern sequencing of samples with mixed cells from environmental or artificial {{Yu 2017}} microbial communities.
 
 {{Figure needed: a typical metagenome method work flow}}
 
