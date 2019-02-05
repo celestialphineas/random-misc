@@ -35,7 +35,7 @@ The reads will then be used for data analysis. Common tasks are assembly of the 
 
 ##### Metagenome
 
-The metagenome approach to microbiome studies concerns sequencing 
+The metagenome approach to microbiome genomic studies concerns sequencing of 
 
 {{Figure needed: a typical metagenome method work flow}}
 
@@ -61,9 +61,9 @@ The metagenome approach to microbiome studies concerns sequencing
 
 #### Metagenome
 
-| Paper/Method | Number of cells | Cells per sample | Number of reads | Tools |
-| ------------ | --------------- | ---------------- | --------------- | ----- |
-|              |                 |                  |                 |       |
+| Paper/Method | Number of cells | Cells per sample | Number of reads | Description | Tools |
+| ------------ | --------------- | ---------------- | --------------- | ----------- | ----- |
+|              |                 |                  |                 |             |       |
 
 {{Chart needed: a comparison of the metagenome papers}}
 
@@ -71,11 +71,11 @@ The metagenome approach to microbiome studies concerns sequencing
 
 #### Single-Cell
 
-| Paper/Method | Number of cells | Number of reads | Tools |
-| ------------ | --------------- | --------------- | ----- |
-|              |                 |                 |       |
+| Paper/Method | Number of cells | Number of reads | Description | Tools |
+| ------------ | --------------- | --------------- | ----------- | ----- |
+|              |                 |                 |             |       |
 
-{{Chart needed: a comparison of the metagenome papers}}
+{{Chart needed: a comparison of the single-cell papers}}
 
 ##### Challenges & Limitations
 
