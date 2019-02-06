@@ -51,9 +51,17 @@ The next-generation DNA sequencing and the data analysis of it concerns methods 
 
 ##### Properties of the Input Data
 
-
+* The reads are strings on characters A, C, G and T.
+* The reads have overlaps, and this information helps to do the assembly, i.e. combining the short reads to longer sequences.
+* Part of the reads are on the complementary strand to the others. For example, if the sequence of a strand is ACCGGGTTTT, then its complementary strand is AAAACCCGGT. {{See: Biological Background / DNA and Genome}} And when you are getting reads for 5 bp long, you may see both ACCGG and AAAAC in the result.
+* The reads are not always identical to some subsequence of the reference / expected genome, since errors may occur in the replication of a DNA molecule, as well as in the sequencing process.
+* The quality of the sequencing are recorded per nucleotide. See FASTQ file format specification for details. {{Cock 2010}}}
+* In metagenome studies, the reads coming from the same run (also in the same file) are from different cells, which brings troubles to assembly. 
+* In single-cell studies, the reads are expected to be from the DNA of a single cell. However there might be contamination.
 
 ##### Assembly & Alignment
+
+
 
 ##### Binning
 
