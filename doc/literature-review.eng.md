@@ -20,9 +20,9 @@ The DNA segment that encodes certain protein is called the gene of the protein. 
 
 DNA sequencing techniques are applied to determine the nucleotide order in DNA. The very first DNA sequencing technology was as early as 1970s, typically the Sanger Sequencing. Since the mid 1990s, a few new sequencing methods emerged, and these methods are called “next-generation” or “second-generation” sequencing methods.
 
-The DNA sequencing methods are still unable to work out the full DNA sequence as a whole for once, instead, only parts of the DNA can be sequenced each time. The segments directly read by the method are called “reads” in the context.
+The DNA sequencing methods do not work out the whole genome for once. Instead, only parts of the DNA can be sequenced each time, and the lengths of the outputs depend on the methods. The direct output sequences of the sequencing procedure are called “reads” in the context.
 
-Read length and the number of reads per run are two factors to assess the performance of a sequencing method. {{Hodkinson 2014}} One of the commercial high-throughput sequencing methods is implemented by Illumina, and is used in the study.
+Read length and the number of reads per run are two factors to assess the performance of a sequencing method. One of the commercial high-throughput sequencing methods is implemented by Illumina, which can reach 300 bp (base-pair) for highest average read length and ~10^9^ reads / run for speed {{Hodkinson 2014}}. The Illumina *de novo* sequencing (no reference sequence available for aligning the reads) is used in the study. 
 
 {{Figure needed: IIllumina sequencing}}
 
@@ -31,23 +31,27 @@ The amplification process is necessary for the single molecules to amplify the r
 The reads will then be used for data analysis. Common tasks are assembly of the reads to longer contigs (contiguous sequences), alignment to the known genome, binning (combining) the contigs to species level, etc. {{An introduction to Next-Generation Sequencing Technology}} All of the tasks require computational efforts, and will be discussed later.
 
 
-#### Current Microbiome Genomics Methods
+#### Current Microbiome Genomic Methods
 
 ##### Metagenome
 
-The metagenome approach to microbiome genomic studies concern sequencing of samples with mixed cells from environmental or artificial {{Yu 2017}} microbial communities.
+The metagenome approach to microbiome genomic studies concern sequencing of samples with mixed cells from environmental or artificial {{Yu 2017}} microbial communities. We here draft an outline of a typical metagenome method in a microbiome genomic research.
 
 {{Figure needed: a typical metagenome method work flow}}
 
 ##### Single-Cell
 
+Cell sources in single-cell researches may not vary much from the metagenome approach, however the cell isolation and the whole-genome amplification processes must be introduced. {{Gawad 2015}}
+
 {{Figure needed: a typical single-cell method work flow}}
 
 #### Computational Aspects
 
-> Big data, blablabla…
+The next-generation DNA sequencing and the data analysis of it concerns methods in data science. This part sums up what the data to be analyses looks like, what operations will be performed on the data, how these operations are done, and what are the computational challenges behind them.
 
 ##### Properties of the Input Data
+
+
 
 ##### Assembly & Alignment
 
