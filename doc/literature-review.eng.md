@@ -22,7 +22,7 @@ DNA sequencing techniques are applied to determine the nucleotide order in DNA. 
 
 The DNA sequencing methods do not work out the whole genome for once. Instead, only parts of the DNA can be sequenced each time, and the lengths of the outputs depend on the methods. The direct output sequences of the sequencing procedure are called “reads” in the context.
 
-Read length and the number of reads per run are two factors to assess the performance of a sequencing method. One of the commercial high-throughput sequencing methods is implemented by Illumina, which can reach 300 bp (base-pair) for highest average read length and ~10^9^ reads / run for speed {{Hodkinson 2014}}. The Illumina *de novo* sequencing (no reference sequence available for aligning the reads) is used in the study. 
+Read length and the number of reads per run are two factors to assess the performance of a sequencing method. One of the commercial high-throughput sequencing methods is implemented by Illumina, which can reach 300 bp (base-pair) for highest average read length and ~10^9^ reads / run for speed {{Hodkinson 2014}}. The Illumina *de novo* sequencing method (no reference sequence available for aligning the reads) is used in the study. 
 
 {{Figure needed: IIllumina sequencing}}
 
@@ -61,7 +61,7 @@ The next-generation DNA sequencing and the data analysis of it concerns methods 
 
 ##### Assembly & Alignment
 
-Assembly is 
+Assembly is the process to merge short reads to longer sequence in DNA sequencing. The result sequences are called contigs (contiguous segments)
 
 ##### Binning
 
