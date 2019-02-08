@@ -77,20 +77,28 @@ Most of the popular DNA assemblers are DBG assemblers with a few adaptations. Fo
 
 ##### Alignment
 
+The reads may be then aligned to contigs, constructed scaffold or the known gnome. This alignment (finding where the reads from in a larger scale) can be useful for future analysis, for example, evaluating the abundance of certain DNA among samples.
 
+Since the reads are not always identical to the reference sequences. The alignment is not done by precise searching on the reference, rather, by searching by similarity. {{Understanding Bioinformatics}}
 
 ##### Binning
 
+The sequencing data of the samples may have a low coverage of the whole genome. Putting the contigs from the same species together can have us make better use of the sequencing data. The contigs may come from either the same sample or across samples. To be concise, binning is to collect similar DNA sequences together to species-level.
 
+How do we know if a contig is from the same cell / species? We can either find clues from the abundance pattern across samples, or make use of the sequences themselves. MetaBAT is an effective tool to do binning, and it introduces a novel way to classify the contigs across samples. Before MetaBAT, most binning are unsupervised, typically clustering by the abundance pattern and sequence features. However, for MetaBAT, the similarity of the contigs are assessed using a probabilistic model. The probability that two contigs are from the same cell is predicted with a naive Bayes classifier, which is trained with data. The later binning process for MetaBAT also uses unsupervised clustering method. {{Kang 2015}}
+
+Most binning tools use a statistic of $k​$-mer frequencies as a way to extract sequence features. {{Sczyrba 2017}} Binning requires various dimension reduction techniques to make classifying and clustering possible or to visualize the data on a 2D plot.
 
 ##### Others
 
-
+There are also other analysis procedures and methods depending on various objects of different studies, but that’s beyond the scope of this background introduction.
 
 
 ### Current State
 
 #### Metagenome
+
+
 
 | Paper/Method | Number of cells | Cells per sample | Number of reads | Description | Tools |
 | ------------ | --------------- | ---------------- | --------------- | ----------- | ----- |
@@ -102,9 +110,9 @@ Most of the popular DNA assemblers are DBG assemblers with a few adaptations. Fo
 
 #### Single-Cell
 
-| Paper/Method | Number of cells | Number of reads | Coverage | Depth | Description | Tools |
-| ------------ | --------------- | --------------- | -------- | ----- | ----------- | ----- |
-|              |                 |                 |          |       |             |       |
+| Paper/Method | Number of cells | Number of reads | Coverage & Depth | Description | Tools |
+| ------------ | --------------- | --------------- | ---------------- | ----------- | ----- |
+|              |                 |                 |                  |             |       |
 
 {{Chart needed: a comparison of the single-cell papers}}
 
