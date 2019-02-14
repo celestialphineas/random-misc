@@ -87,26 +87,30 @@ The sequencing data of the samples may have a low coverage of the whole genome. 
 
 How do we know if a contig is from the same cell / species? We can either find clues from the abundance pattern across samples, or make use of the sequences themselves. MetaBAT is an effective tool to do binning, and it introduces a novel way to classify the contigs across samples. Before MetaBAT, most binning are unsupervised, typically clustering by the abundance pattern and sequence features. However, for MetaBAT, the similarity of the contigs are assessed using a probabilistic model. The probability that two contigs are from the same cell is predicted with a naive Bayes classifier, which is trained with data. The later binning process for MetaBAT also uses unsupervised clustering method. {{Kang 2015}}
 
-Most binning tools use a statistic of $k​$-mer frequencies as a way to extract sequence features. {{Sczyrba 2017}} Binning requires various dimension reduction techniques to make classifying and clustering possible or to visualize the data on a 2D plot.
+Most binning tools use a statistic of $k$-mer frequencies as a way to extract or select sequence features. {{Sczyrba 2017}} Binning requires various dimension reduction techniques to make classifying and clustering possible or to visualize the data on a 2D plot.
 
 ##### Others
 
 There are also other analysis procedures and methods depending on various objects of different studies, but that’s beyond the scope of this background introduction.
 
-
 ### Current State
+
+Because the audience of this review are believed to be computer science majors rather than biologists, the biological stories behind the researches will be ignored. We will mainly focus on the method, the input and the output, and comparisons will be made, as well as challenges and limitations of both metagenome and single-cell approaches will be evaluated.
 
 #### Metagenome
 
+As we have talked about an outline of metagenome approaches to microbiome genomic research, we here list a few metagenome studies with their methods profiled.Typical metagenome studies use samples without isolating cells, but there are also a few studies using methods that are more close to the single-cell approach, and the number of cells per sample is controlled to a relatively small amount.
 
-
-| Paper/Method | Number of cells | Cells per sample | Number of reads | Description | Tools |
-| ------------ | --------------- | ---------------- | --------------- | ----------- | ----- |
-|              |                 |                  |                 |             |       |
+| Paper/Method    | Number of cells                                       | Cells per sample | Number of reads                     | Length of the used contigs | Coverage & Depth | Description                                                  | Tools                                                        |
+| --------------- | ----------------------------------------------------- | ---------------- | ----------------------------------- | -------------------------- | ---------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Yu et al., 2017 | ~1000 (2 samples, #1 has 48 subsamples and #2 has 93) | ~10              | 254 million (paired end, 121 + 133) | > 10 kbp                   |                  | Multiple Displacement Amplification (MDA) is used, which is uncommon for metagenome studies. | Trimmomatic (read trimming), DNACCLUST (clustering), SPAdes (assembling), Bowtie2 (alignment) |
+|                 |                                                       |                  |                                     |                            |                  |                                                              |                                                              |
 
 {{Chart needed: a comparison of the metagenome papers}}
 
 ##### Challenges & Limitations
+
+
 
 #### Single-Cell
 
