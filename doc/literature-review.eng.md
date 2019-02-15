@@ -101,16 +101,15 @@ Because the audience of this review are believed to be computer science majors r
 
 As we have talked about an outline of metagenome approaches to microbiome genomic research, we here list a few metagenome studies with their methods profiled.Typical metagenome studies use samples without isolating cells, but there are also a few studies using methods that are more close to the single-cell approach, and the number of cells per sample is controlled to a relatively small amount.
 
-| Paper/Method    | Number of cells                                       | Cells per sample | Number of reads                     | Length of the used contigs | Coverage & Depth | Description                                                  | Tools                                                        |
-| --------------- | ----------------------------------------------------- | ---------------- | ----------------------------------- | -------------------------- | ---------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Yu et al., 2017 | ~1000 (2 samples, #1 has 48 subsamples and #2 has 93) | ~10              | 254 million (paired end, 121 + 133) | > 10 kbp                   |                  | Multiple Displacement Amplification (MDA) is used, which is uncommon for metagenome studies. | Trimmomatic (read trimming), DNACCLUST (clustering), SPAdes (assembling), Bowtie2 (alignment) |
-|                 |                                                       |                  |                                     |                            |                  |                                                              |                                                              |
-
-{{Chart needed: a comparison of the metagenome papers}}
+| Paper/Method         | Number of samples                      | Cells per sample  | Number of reads                     | Length of the used contigs | Genomes discovered                                         | Description                                                  | Tools                                                        |
+| -------------------- | -------------------------------------- | ----------------- | ----------------------------------- | -------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Yu et al., 2017      | 2 (#1 has 48 subsamples and #2 has 93) | ~10 per subsample | 254 million (paired end, 121 + 133) | > 10 kbp                   | 29 extracted, most are new                                 | Multiple Displacement Amplification (MDA) is used, which is uncommon for metagenome studies. | DNACCLUST (clustering), SPAdes (assembling), Bowtie2 (alignment) |
+| Stewart et al., 2018 | 42 metagenome samples                  | Undivided samples | 139.6 million (paired)              | > 2 kbp                    | 913 (draft, 90% predicted proteins do not have good match) | Hi-C-based proximity-guided assembly is used                 | MEGAHIT (assembly), BWA MEM (alignment),  Kraken (classification), MetaBAT (binning) |
+| Pasolli et al., 2019 | 9,428                                  | Undivided samples | 4.1e11                              | > 1 kbp                    | > 150,000 (4,930 species, 77% unknown)                     |                                                              | metaSPAdes (paired assembly), MEGAHIT (unpaired assembly), MetaBAT(binning) |
 
 ##### Challenges & Limitations
 
-
+Compared to the single-cell approach, metagenome methods can be much easier and more straight-forward to operate, since there is no need to isolate the cells. However, because sequences from various cells are mixed together, the metagenome approach faces the problem of differentiating the sequences from various cells
 
 #### Single-Cell
 
@@ -121,6 +120,14 @@ As we have talked about an outline of metagenome approaches to microbiome genomi
 {{Chart needed: a comparison of the single-cell papers}}
 
 ##### Challenges & Limitations
+
+#### Tools
+
+##### MetaBAT
+
+##### QUAST
+
+##### Kraken
 
 ### Discussion
 
