@@ -109,17 +109,24 @@ As we have talked about an outline of metagenome approaches to microbiome genomi
 
 ##### Challenges & Limitations
 
-Compared to the single-cell approach, metagenome methods can be much easier and more straight-forward to operate, since there is no need to isolate the cells. However, because sequences from various cells are mixed together, the metagenome approach faces the problem of differentiating the sequences from various cells
+Compared to the single-cell approach, metagenome methods can be much easier and more straight-forward to operate, since there is no need to isolate the cells. However, because sequences from various cells are mixed together, the metagenome approach faces the major problem of differentiating the sequences and cells. Though this bulk approach has already achieved goals like identifying new species, most of the studies are done on a ecosystem or organism level. {{Gawad 2016}}
 
 #### Single-Cell
 
-| Paper/Method | Number of cells | Number of reads | Coverage & Depth | Description | Tools |
-| ------------ | --------------- | --------------- | ---------------- | ----------- | ----- |
-|              |                 |                 |                  |             |       |
+Single cell studies often concern isolating cells and performing whole-genome amplification (usually multiple displacement amplification, MDA). Single-cell approaches is still less popular than meta-genome approaches in microbiome studies. {{Gawad 2016}} reviewed a great number of single-cell approach literatures with their contributions listed and classified. Below lists a few more recent studies, which focus more on the experimental methods and improvements.
 
-{{Chart needed: a comparison of the single-cell papers}}
+| Paper/Method    | Number of cells                               | Number of reads          | Description                                                  | Tools                            |
+| --------------- | --------------------------------------------- | ------------------------ | ------------------------------------------------------------ | -------------------------------- |
+| Xu et al., 2016 | 421                                           | 0.7 million per sample   | Using in-gel digital multiple displacement amplification (dMDA), reduced chimerism compared to liquid MDA | No computational tools mentioned |
+| Lan et al.,     | The method could handle >50,000 cells per run | ~15 million (single end) |                                                              | Bowtie2, Kraken                  |
 
 ##### Challenges & Limitations
+
+ 
+
+MDA is used
+
+
 
 #### Tools
 
