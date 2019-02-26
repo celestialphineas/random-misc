@@ -141,15 +141,21 @@ MetaBAT uses two probabilistic models to predict the similarity of two contigs w
 
 The similarity of the sequences are measured by tetranucleotide frequency probability distance (TDP). Tetranucleotide frequency (TNF) is a statistics defined on a DNA sequence. It counts up the frequencies of all the adjacent 4-mers on a sequence. MetaBAT introduces TDP as the probability that two contigs came from the same species. This probability is calculated by a naïve Bayes classifier trained with public data.
 
-Abundances of the contigs among samples are also used. MetaBAT address this part as the abundance distance probability (ADP). ADP is evaluated by assuming the abundance of contigs among the samples obey a normal distribution, and the result ADP value of two contigs is defined as the integral of the difference between the two corresponding distributions.
+Abundances of the contigs among samples are also used. MetaBAT address this part as the abundance distance probability (ADP). ADP is evaluated by assuming the abundance of contigs among the samples obey a normal distribution, and the result ADP value of two contigs is defined as the integral of the difference between the two corresponding distributions. {{Kang 2015}}
 
 ##### Kraken
 
-##### Quast
+Kraken is classifier for metagenomic DNA sequences. Given a series of genomes as reference sequences, Kraken is able to tell the source of a query sequence if it is from a known species.
 
+To make Kraken work, a taxonomic tree and a look-up table between k-mers and the tree nodes need to be built. Kraken would first build a taxonomic tree based on the reference sequences of given genomes. Then it would compute sets of appeared k-mers for each given genome. For all the k-mers occurred, we find the lowest common ancestor of the related genomes on the taxonomic tree, and record this tree node to a look-up table.
 
+To determine the species of a query sequence, we find and count the occurrences of each k-mer in the sequence. And then we assign the counts to the taxonomic tree nodes by looking-up the table we built. Then the searching is done by calculating the maximum root-to-leaf path. The corresponding species of the leaf node would be the query result.
+
+Kraken also introduced a few computational interesting tricks to provide better performance. It defined new concepts like the canonical form of a sequence, and a M-mer minimizer for each sequence. This would help with the design of the look-up table, causing smaller memory footprint and featuring smaller cache loading overhead. {{Wood 2014}}
 
 ### Discussion
+
+
 
 More measures to do feature extraction?
 
