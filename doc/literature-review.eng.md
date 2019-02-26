@@ -131,15 +131,27 @@ Multiple displacement amplification (MDA) is often used as a method to amplify t
 
 #### Tools
 
+Below we list a few popular bioinformatic tools, whose methods are inspiring.
+
 ##### MetaBAT
 
-##### QUAST
+MetaBAT is a genome binning tool. It clusters similar contigs and construct bins of them in species level. 
+
+MetaBAT uses two probabilistic models to predict the similarity of two contigs which would be used for clustering. The similarity of the contigs are accessed in two aspects, both by their similarities of the sequences themselves, and by their abundances among the samples.
+
+The similarity of the sequences are measured by tetranucleotide frequency probability distance (TDP). Tetranucleotide frequency (TNF) is a statistics defined on a DNA sequence. It counts up the frequencies of all the adjacent 4-mers on a sequence. MetaBAT introduces TDP as the probability that two contigs came from the same species. This probability is calculated by a naïve Bayes classifier trained with public data.
+
+Abundances of the contigs among samples are also used. MetaBAT address this part as the abundance distance probability (ADP). ADP is evaluated by assuming the abundance of contigs among the samples obey a normal distribution, and the result ADP value of two contigs is defined as the integral of the difference between the two corresponding distributions.
 
 ##### Kraken
 
+##### Quast
+
+
+
 ### Discussion
 
-More measures to do feature reduction?
+More measures to do feature extraction?
 
 
 
