@@ -155,11 +155,11 @@ Kraken also introduced a few computational interesting tricks to provide better 
 
 ### Discussion
 
+Advanced algorithms, from combinatorics to deep learning {{Galkin 2018}} have already been applied to bioinformatics. Tools with subtle implementations and optimizations of the methods on a hardware level have also become common. But there are still potential improvements for these methods, for example the way to reduce the dimensions of the sequencing data, which requires feature selection or extraction techniques of a DNA sequence. 
 
+Single-cell methods in microbiome studies are still relatively rare compared to metagenomic approaches. The complexity of natural samples are converted to a huge amount of isolated cells. This would provide new information as well as new challenges. New approach for handling the data is required, especially the strategy of choosing cells for co-assembly. This requires novel methods for preprocessing the data.
 
-More measures to do feature extraction?
-
-
+Though there has already been plenty of tools for various tasks in DNA sequencing data analysis, workflow design and development of custom tools are still in need of computer science efforts. From a scientific perspective, what matters most is the output of computational methods. However, the computational effectiveness also counts, since it would give new possibilities to data analysis in larger scale, and this raises problems in the aspect of engineering.
 
 ### References
 
