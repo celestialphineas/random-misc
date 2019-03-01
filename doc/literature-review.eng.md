@@ -12,7 +12,7 @@ In both cases, the current-state sequencing methods produce data in large scales
 
 ##### DNA and Genome
 
-DNA (deoxyribonucleic acid) is a type of macromolecule consisting of two chains, forming a double helix structure. Each strand of the DNA molecule is a long sequence built up with nucleotides. One end of the strand is named 5’ end, and the other is named 3’ end. The two strands go opposite directions. There are four types of nucleotides, differentiated by their bases (A, C, G, T). The two chains of the DNA molecule are complementary according to the base pairing rule (A–C, G–T). DNA encodes the genetic information.
+DNA (deoxyribonucleic acid) is a type of macromolecule consisting of two chains, forming a double helix structure. Each strand of the DNA molecule is a long sequence built up with nucleotides. One end of the strand is named 5’ end, and the other is named 3’ end. The two strands go opposite directions. There are four types of nucleotides, differentiated by their bases (A, C, G, T). The two chains of the DNA molecule are complementary according to the base pairing rule (A–T, C–G). DNA encodes the genetic information.
 
 The DNA segment that encodes certain protein is called the gene of the protein. The term “gene” also include the non-coding control regions on a DNA molecule. Genome is the whole set of DNA molecules of an organism. {{Understanding Bioinformatics}}
 
