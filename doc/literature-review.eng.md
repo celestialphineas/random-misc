@@ -147,7 +147,7 @@ Abundances of the contigs among samples are also used. MetaBAT address this part
 
 Kraken is classifier for metagenomic DNA sequences. Given a series of genomes as reference sequences, Kraken is able to tell the source of a query sequence if it is from a known species.
 
-To make Kraken work, a taxonomic tree and a look-up table between k-mers and the tree nodes need to be built. Kraken would first build a taxonomic tree based on the reference sequences of given genomes. Then it would compute sets of appeared k-mers for each given genome. For all the k-mers occurred, we find the lowest common ancestor of the related genomes on the taxonomic tree, and record this tree node to a look-up table.
+To make Kraken work, a taxonomic tree and a look-up table between $k​$-mers and the tree nodes need to be built. Kraken would first build a taxonomic tree based on the reference sequences of given genomes. Then it would compute sets of appeared $k​$-mers for each given genome. For all the $k​$-mers occurred, we find the lowest common ancestor of the related genomes on the taxonomic tree, and record this tree node to a look-up table.
 
 To determine the species of a query sequence, we find and count the occurrences of each k-mer in the sequence. And then we assign the counts to the taxonomic tree nodes by looking-up the table we built. Then the searching is done by calculating the maximum root-to-leaf path. The corresponding species of the leaf node would be the query result.
 
