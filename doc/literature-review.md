@@ -26,7 +26,7 @@ DNA测序方法并非一次将整个基因组测出，而是每次只能测出DN
 
 扩增过程对单个分子而言是必要的，可以增强放射或荧光标记的强度。信号会由数字图像记录下来，每个点都是一个DNA分子簇，对应于一个DNA片段。测序结果可以从一系列的图像中推断出来。
 
-然后得到的读将会被加以分析处理。常见的任务有将较短的读组装（assembly）成更长的连续片段（contig, contiguous sequence），对齐（align）到已知的基因组，将contig装箱（bin）分类到种的级别等。{{An introduction to Next-Generation Sequencing Technology}} 这些任务都需要计算工作，我们将在后文讨论。
+然后得到的读将会被加以分析处理。常见的任务有将较短的读**组装（assembly）**成更长的**连续片段（contig, contiguous sequence）**，**对齐（align）**到已知的基因组，将contig**装箱（bin）**分类到种的级别等。{{An introduction to Next-Generation Sequencing Technology}} 这些任务都需要计算工作，我们将在后文讨论。
 
 ### 当前的微生物基因组研究方法
 
