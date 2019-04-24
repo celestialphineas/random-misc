@@ -18,13 +18,15 @@ The output of a hierarchical clustering model is often a dendrogram, usually a b
 
 #### Distance Functions
 
-Besides *p*-norms, Jaccard dissimilarity is also of important use in the study. If $x=\left(x_1,x_2,\dots,x_n\right),y=\left(y_1,y_2,\dots,y_n\right)$ are two vectors of dimension $n$ where $x_i,y_i\in\left\{0,1\right\}$, the Jaccard dissimilarity of $x$ and $y$ is given by
+Besides *p*-norms, Jaccard dissimilarity is also of important use in the study. If $x=\left(x_1,x_2,\dots,x_n\right),y=\left(y_1,y_2,\dots,y_n\right)​$ are two vectors of dimension $n​$ where $x_i,y_i\in\left\{0,1\right\}​$, the Jaccard dissimilarity of $x​$ and $y​$ is given by
 
 $$J(x,y)=\sum_{i=1}^n x\oplus y​$$
 
-The $\oplus$ is the xor operator.
+The $\oplus​$ is the xor operator.
 
-Jaccard dissimilarity is often used as a distance function for binary vectors.
+Jaccard dissimilarity is often used as a distance function for binary vectors. Its set version is an indicator to describe how similar two sets are. The Jaccard **similarity** of set $X$ and $Y$ is
+
+$$J(X,Y)=\frac{\left|X\cap Y\right|}{\left|X\cup Y\right|}$$
 
 #### Determining the Number of Clusters
 
@@ -61,7 +63,7 @@ The MDS method preserves the distances to some extent. But it loses some informa
 
 #### t-SNE
 
-t-stochastic neighbor embedding (t-SNE) is a probability-based method for dimension reduction. t-SNE defines a probability $p_{ij}$ proportional to the similarity of the high-dimensional objects and the algorithm would learn a mapping that try to minimize the the similarities in the new space.
+t-stochastic neighbor embedding (t-SNE) is a probabilitic method for dimension reduction. t-SNE defines a probability $p_{ij}$ proportional to the similarity of the high-dimensional objects and the algorithm would learn a mapping that try to minimize the the similarities in the new space.
 
 t-SNE does not preserve the distances and density information well, but the neighbors are preserved to a large extent. {{Schubert 2017}}. This property won’t allow t-SNE to be used for preprocessing of the data to cluster. t-SNE point mapping is by-point learned, and thus when new data is added, there is no fast way to map the addition to the low dimensional space.
 
@@ -70,7 +72,11 @@ t-SNE does not preserve the distances and density information well, but the neig
 
 #### Mash & Sourmash
 
+Mash is an alignment-free sequence comparison tool based on the MinHash algorithm {{Ondov 2015}}, and sourmash is another implementation {{Brown 2016}}. Both tools can give the signatures (or sketches) that work as feature vectors extracted from the input sequences.
 
+The MinHash algorithm is a probabilistic method for quick estimation of the Jaccard similarity of two sets. Comparing to the tretranucleotide frequency (TNF) signature based comparison mentioned in our former review, in which a count of 4-mers is used as a feature, MinHash based method allows us to compare the set of adjacent $k$-mers of a larger $k$. The direct calculation of the similarity of two $k$-mer counts becomes impossible for a large $k$, since the number of dimensions of the count vectors is exponential $4^k$. And as $k$ increases, the $k$-mer count of a limited input will get sparser and sparser. In such cases, using a set of the appearing $k$-mers to model the problem is intuitively almost equivalent to using the count vector, the elements of which are almost all 0 and 1 when $k$ is large enough. In this sense, the MinHash based method can be viewed as an approximation of a $k$-mer count based (such as TNF, where $k=4$) method.
+
+Sourmash use $k=31$ by default. Comparing to the TNF method where $k=4$, MinHash based method can preserve the pattern information of the sequences to a larger extent.
 
 #### Kaiju
 
