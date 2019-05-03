@@ -18,11 +18,11 @@ The output of a hierarchical clustering model is often a dendrogram, usually a b
 
 #### Distance Functions
 
-Besides *p*-norms, Jaccard dissimilarity is also of important use in the study. If $x=\left(x_1,x_2,\dots,x_n\right),y=\left(y_1,y_2,\dots,y_n\right)​$ are two vectors of dimension $n​$ where $x_i,y_i\in\left\{0,1\right\}​$, the Jaccard dissimilarity of $x​$ and $y​$ is given by
+Besides *p*-norms, Jaccard dissimilarity is also of important use in the study. If $x=\left(x_1,x_2,\dots,x_n\right),y=\left(y_1,y_2,\dots,y_n\right)$ are two vectors of dimension $n$ where $x_i,y_i\in\left\{0,1\right\}$, the Jaccard dissimilarity of $x$ and $y$ is given by
 
-$$J(x,y)=\sum_{i=1}^n x\oplus y​$$
+$$J(x,y)=\sum_{i=1}^n x\oplus y$$
 
-The $\oplus​$ is the xor operator.
+The $\oplus$ is the xor operator.
 
 Jaccard dissimilarity is often used as a distance function for binary vectors. Its set version is an indicator to describe how similar two sets are. The Jaccard **similarity** of set $X$ and $Y$ is
 
@@ -72,7 +72,7 @@ t-SNE does not preserve the distances and density information well, but the neig
 
 #### Mash & Sourmash
 
-Mash is an alignment-free sequence comparison tool based on the MinHash algorithm {{Ondov 2015}}, and sourmash is another implementation {{Brown 2016}}. Both tools can give the signatures (or sketches) that work as feature vectors extracted from the input sequences.
+Mash is an alignment-free sequence comparison tool based on the MinHash algorithm {{Ondov 2015}}, and sourmash is another implementation of the algorithm {{Brown 2016}}. Both tools give the signatures (or sketches) that work as feature vectors extracted from the input sequences.
 
 The MinHash algorithm is a probabilistic method for quick estimation of the Jaccard similarity of two sets. Comparing to the tretranucleotide frequency (TNF) signature based comparison mentioned in our former review, in which a count of 4-mers is used as a feature, MinHash based method allows us to compare the set of adjacent $k$-mers of a larger $k$. The direct calculation of the similarity of two $k$-mer counts becomes impossible for a large $k$, since the number of dimensions of the count vectors is exponential $4^k$. And as $k$ increases, the $k$-mer count of a limited input will get sparser and sparser. In such cases, using a set of the appearing $k$-mers to model the problem is intuitively almost equivalent to using the count vector, the elements of which are almost all 0 and 1 when $k$ is large enough. In this sense, the MinHash based method can be viewed as an approximation of a $k$-mer count based (such as TNF, where $k=4$) method.
 
@@ -80,11 +80,25 @@ Sourmash use $k=31$ by default. Comparing to the TNF method where $k=4$, MinHash
 
 #### Kaiju
 
+Kaiju is a sequence taxonomic classification tool. It can classify reads and contigs and give the sequences taxon predictions. Kaiju works by protein level sequence searching which is more robust than searching by DNA because of the conservativeness and degeneracy of protein sequences. 
 
+Kaiju uses Burrows–Wheeler transformation (BWT) for compressing data base sequences and fast sequence searching. BWT algorithm is also used in sequence alignment tools, including Bowtie and BWA, for fast sequence searching and efficient memory usage. {{Menzel 2015}}
+
+In this study, Kaiju is used as a classification tool for single-cell sequencing data.
 
 #### Other Sequence Classification Tools
 
-
+We also use the online version of rMLST for taxonomic classification of draft genome assemblies. rMLST is a ribosomal multilocus sequence classification tool, and provide taxonomic predictions with probabilities. {{Jolley 2012}}
 
 #### DAS Tool
+
+DAS Tool is a method to combine and integrate the results of different binning methods. It uses a dereplication, aggregation and scoring strategy to optimize binning result, which increase the number of genome bins, improve the quality of the assemblies and reduce the redundancy. {{Sieber 2018}} We here apply DAS Tool to the metagenomic time series data as a strategy to reduce the binning complexity. 
+
+### Quality Assessment
+
+Quality assessment should be performed after the data analysis process. Genome bin quality indicators include completeness and contamination (redundancy rate to the expected genome size) percentage, mean, median and total length of the contigs, and N50 statistics (the shortest length of the longest contigs that covers 50% of the total genome length), etc.
+
+CheckM is an advanced tool for completeness and contamination estimation using marker genes and the genome’s inferred lineage, and is used as the major tool in our quality control process. {{Parks 2015}}
+
+The quality assessment and control results also requires visualization techniques for providing human readers a better understanding to the key features of the data. 
 
