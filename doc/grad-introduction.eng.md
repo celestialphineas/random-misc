@@ -45,24 +45,24 @@ A mock community consisting of 4 species (*Bacillus subtilis*, *Escherichia coli
 * 150 bp read length
 * ~ 36 GB in total
 
-##### NovaSeq Single Cell Data
+##### Pilot Single Cell Data
 
-Illumina NovaSeq sequencing is performed on 5 single-cell samples acquired from the donor, numbered S1 to S5.
+Illumina NextSeq sequencing is performed on 5 single-cell samples acquired from the donor.
 
 * 5 samples
 * 3011 cells
 * Paired-end and single-end reads
-* 150 bp read length
+* 150 bp read length {{VERIFICATION NEEDED}}
 * ~ 76 GB in total
 
-##### NextSeq Single Cell Data
+##### Single Cell Data
 
-Illumina NextSeq sequencing is performed on 10 single-cell samples acquired from the same donor.
+Illumina NextSeq and NovaSeq sequencing is performed on 10 single-cell samples acquired from the same donor.
 
-* 10 samples (with one shared sample with NovaSeq)
+* 10 samples
 * 18903 cells
 * Paired-end and single end reads
-* 150 bp read length
+* 150 bp read length {{VERIFICATION NEEDED}}
 * ~ 300 GB in total
 
 ##### Metagenomics Data
@@ -73,6 +73,6 @@ Illumina NextSeq sequencing is performed on 10 single-cell samples acquired from
 
 In Chapter 1, we introduced the general background, subject and the target of the study. Chapter 2 is an additional literature review, with a comprehensive description of the underlying computational tools and methods used in our data analysis pipeline. The biological background and concept clarification are much more detailed in Part II of the thesis and shall not be repeated in Part I again. 
 
-Chapter 3 is a detailed description of the data analysis method. {{SECTION CONTENTS}} The results are shown in Chapter 4, with both the quality assessment and statistical characterizations of the discovered genomes and the comparison of the genomes with taxonomic information. Visualization techniques are used as key methods for presenting the results. Chapter 5 is a summarization, starting with a list of programs finished during the work of this thesis, and then pointing out the known issues and future work.
+Chapter 3 is a detailed description of the data analysis method. {{SECTION CONTENTS}} The results are shown in Chapter 4, with both the quality assessment and statistical characterizations of the discovered genomes and the comparison of the genomes with taxonomic information. Visualization techniques are used as key methods for presenting the results. Chapter 5 is a summary, starting with a list of programs finished during the work of this thesis, and then pointing out the known issues and future work.
 
 The design of the experiment together with other supplementary materials, including data, graphs and texts are found in the appendix.
