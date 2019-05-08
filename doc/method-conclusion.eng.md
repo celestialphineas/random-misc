@@ -22,6 +22,10 @@ To achieve the goal with high computational efficiency, we propose a new single-
 
 ## Results
 
+### Data {{?}}
+
+{{Single cell MDS, phylum level}}
+
 ### Recovering Genomes
 
 
@@ -37,3 +41,11 @@ To achieve the goal with high computational efficiency, we propose a new single-
 ### Genome Similarity Comparison
 
 
+
+## Appendix
+
+{{Kaiju classification coverage by rank}}
+
+{{Unaligned reads histogram among the cells}}
+
+{{Unclassified reads histograms by rank}}
