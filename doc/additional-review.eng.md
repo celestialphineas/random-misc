@@ -72,7 +72,7 @@ t-SNE does not preserve the distances and density information well, but the neig
 
 #### Mash & Sourmash
 
-Mash is an alignment-free sequence comparison tool based on the MinHash algorithm {{Ondov 2015}}, and sourmash is another implementation of the algorithm {{Brown 2016}}. Both tools give the signatures (or sketches) that work as feature vectors extracted from the input sequences.
+Mash is an alignment-free sequence comparison tool based on the MinHash algorithm {{Ondov 2015}}, and sourmash is another implementation of the algorithm {{Brown 2016}}. Both tools give the signatures that work as feature vectors extracted from the input sequences.
 
 The MinHash algorithm is a probabilistic method for quick estimation of the Jaccard similarity of two sets. Comparing to the tretranucleotide frequency (TNF) signature based comparison mentioned in our former review, in which a count of 4-mers is used as a feature, MinHash based method allows us to compare the set of adjacent $k$-mers of a larger $k$. The direct calculation of the similarity of two $k$-mer counts becomes impossible for a large $k$, since the number of dimensions of the count vectors is exponential $4^k$. And as $k$ increases, the $k$-mer count of a limited input will get sparser and sparser. In such cases, using a set of the appearing $k$-mers to model the problem is intuitively almost equivalent to using the count vector, the elements of which are almost all 0 and 1 when $k$ is large enough. In this sense, the MinHash based method can be viewed as an approximation of a $k$-mer count based (such as TNF, where $k=4$) method.
 
