@@ -92,7 +92,7 @@ Kaiju利用Burrows–Wheeler变换（BWT）压缩数据库与快速查找序列�
 
 我们也使用到了rMLST的线上API对基因组组装草图（draft genome assembly）做分类学分类。rMLST利用核糖体多位点序列（ribosomal multilocus sequence）分类，能给出分类单元预测和对应分数。{{Jolley 2012}}
 
-CAT（contig annotation tool）是对长DNA序列的分类学分类工具，它可以结合多个分类工具和方法的预测结果给出一个更加准确的预测。{{Cambuy 2016}}
+CAT（contig annotation tool）是对长DNA序列的分类学分类工具，它可以结合多个分类工具和方法的预测结果给出一个更加准确的预测。{{Cambuy 2016, Buchfink 2015, Hyatt 2010}}
 
 #### DAS Tool
 
