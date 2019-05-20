@@ -1,3 +1,11 @@
+## 摘要
+
+人类肠道中微生物群的基因组学研究愈发引起研究关注，不断增进着人们对进化和人类健康的理解。将单细胞基因组学的方法应用于其中还方兴未艾，其产生的生物信息数据给计算带来的挑战仍亟待解决。本文我们提出了崭新的数据处理流程，从人类肠道微生物群的测序数据中恢复基因组。该数据由前沿的单细胞实验设计获得。经数据处理，从中发现了共708个基因组组装草图，其中90个完整性超过了90%，61个是高质量的（> 90%完整性，< 5%污染度）。通过聚类分析，我们将细胞划分为组，每组对应于一个物种，基因组组装即由协同组装同物种测序数据得到。明确细胞的物种可以帮助我们更好地刻画微生物群落的结构。我们的数据处理结果也预示着，单细胞方法能帮助人们在细胞层次上更详尽地研究微生物群落。
+
+## Abstract
+
+Microbiome in human gut has increasing become a research interest, providing us with insights into understandings towards evolution and human health. The application of single-cell genomics in this field has remained unfully practiced and requires computational efforts to solve the challenges in handling sequencing data. In this essay, we proposed a new data processing pipeline for recovering genomes in human gut microbiome sequencing data acquired by a novel single-cell experiment design. 708 draft genome assemblies were recovered, with 90 of them having over 90% completeness and 61 in high quality (> 90% completeness, < 5% contamination). The genome assemblies were acquired by co-assembly clustered single-cell sequencing data at the species rank. Identifying the species of the cells can also helped us better characterize the structure of the microbial community. The data analysis result implies that the new single-cell method will allow us to study the microbial community in detail up to the cell level.
+
 ## 绪论
 
 ### 课题背景
@@ -35,7 +43,7 @@
 
 #### 数据概述
 
-##### 模拟群落
+##### 模拟群落（mock community）
 
 我们将实验方法应用于模拟群落作为实验设计和数据分析的基准，并评估实验质量和生化引入的人为效应。这个模拟群落由四个物种组成（枯草杆菌*Bacillus subtilis*, 大肠杆菌*Escherichia coli*, 克雷伯氏肺炎菌*Klebsiella pneumoniae*和金黄色葡萄球菌*Staphylococcus aureus*）。下将数据的关键属性列出：
 
